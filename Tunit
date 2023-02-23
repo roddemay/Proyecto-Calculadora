@@ -1,0 +1,218 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
+ */
+package com.mycompany.mavenproject1;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ *
+ * @author RDEMAYC
+ */
+public class FuncionalidadesTest {
+    
+    public FuncionalidadesTest() {
+    }
+
+    /**
+     *
+     * @throws Exception
+     */
+    @org.junit.jupiter.api.BeforeAll
+    public static void setUpClass() throws Exception {
+    }
+
+    @org.junit.jupiter.api.AfterAll
+    public static void tearDownClass() throws Exception {
+    }
+
+    @org.junit.jupiter.api.BeforeEach
+    public void setUp() throws Exception {
+    }
+
+    @org.junit.jupiter.api.AfterEach
+    public void tearDown() throws Exception {
+    }
+   /* 
+    @BeforeAll
+    public static void setUpClass() {
+    }
+    
+    @AfterAll
+    public static void tearDownClass() {
+    }
+    
+    @BeforeEach
+    public void setUp() {
+    }
+    
+    @AfterEach
+    public void tearDown() {
+    }
+
+    /**
+     * Test of pref method, of class Funcionalidades.
+     */
+    @org.junit.jupiter.api.Test
+    public void testPref() {
+        System.out.println("pref");
+        String pref = "*";
+        int expResult = 4;
+        int result = Funcionalidades.pref(pref);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of balanceParentesis method, of class Funcionalidades.
+     */
+    @org.junit.jupiter.api.Test
+    public void testBalanceParentesis() {
+        System.out.println("balanceParentesis");
+        String cadena = "()";
+        boolean expResult = true;
+        boolean result = Funcionalidades.balanceParentesis(cadena);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+     
+    }
+
+    /**
+     * Test of esOperador method, of class Funcionalidades.
+     */
+    @org.junit.jupiter.api.Test
+    public void testEsOperador() {
+        System.out.println("esOperador");
+        String caracter = "+";
+        boolean expResult = true;
+        boolean result = Funcionalidades.esOperador(caracter);
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of esOperadorSinResta method, of class Funcionalidades.
+     */
+    @org.junit.jupiter.api.Test
+    public void testEsOperadorSinResta() {
+        System.out.println("esOperadorSinResta");
+        String caracter = "-";
+        boolean expResult = false;
+        boolean result = Funcionalidades.esOperadorSinResta(caracter);
+        assertEquals(expResult, result);
+    }
+
+        @org.junit.jupiter.api.Test
+    public void testEsOperadorSinResta2() {
+        System.out.println("esOperadorSinResta");
+        String caracter = "+";
+        boolean expResult = true;
+        boolean result = Funcionalidades.esOperadorSinResta(caracter);
+        assertEquals(expResult, result);
+    }
+    /**
+     * Test of esNumero method, of class Funcionalidades.
+     */
+    @org.junit.jupiter.api.Test
+    public void testEsNumero() {
+        System.out.println("esNumero");
+        String caracter = "1";
+        boolean expResult = true;
+        boolean result = Funcionalidades.esNumero(caracter);
+        assertEquals(expResult, result);
+    }
+
+    
+     @org.junit.jupiter.api.Test
+    public void testEsNumero2() {
+        System.out.println("esNumero");
+        String caracter = "+";
+        boolean expResult = false;
+        boolean result = Funcionalidades.esNumero(caracter);
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of verificaSintaxis method, of class Funcionalidades.
+     */
+    @org.junit.jupiter.api.Test
+    public void testVerificaSintaxis() {
+        System.out.println("verificaSintaxis");
+        String cadena = "(1+1/3-47*(72))";
+        boolean expResult = true;
+        boolean result = Funcionalidades.verificaSintaxis(cadena);
+        assertEquals(expResult, result);
+    }
+
+    @org.junit.jupiter.api.Test
+    public void testVerificaSintaxis2() {
+        System.out.println("verificaSintaxis");
+        String cadena = "(hola como estas?)";
+        boolean expResult = false;
+        boolean result = Funcionalidades.verificaSintaxis(cadena);
+        assertEquals(expResult, result);
+    }
+    /**
+     * Test of delimitaCadena method, of class Funcionalidades.
+     */
+    @org.junit.jupiter.api.Test
+    public void testDelimitaCadena() {
+        System.out.println("delimitaCadena");
+        String cadena = "1+1";
+        PilaA res = new PilaA();
+        res.push(1);
+        res.push("+");
+        res.push(1);
+        
+        PilaA expResult = res;
+        PilaA result = Funcionalidades.delimitaCadena(cadena);
+        assertEquals(expResult, result);
+      
+    }
+
+    /**
+     * Test of conviertePostFijo method, of class Funcionalidades.
+     */
+    @org.junit.jupiter.api.Test
+    public void testConviertePostFijo() {
+        System.out.println("conviertePostFijo");
+        PilaA res = new PilaA();
+        res.push(1);
+        res.push("+");
+        res.push(1);
+        PilaA Expresion = res;
+        PilaA p2= new PilaA();
+        p2.push("+");
+        p2.push(1);
+        p2.push(1);
+        
+        PilaA expResult = p2;
+        PilaA result = Funcionalidades.conviertePostFijo(Expresion);
+        assertEquals(expResult, result);
+        
+    }
+
+    /**
+     * Test of Resuelve method, of class Funcionalidades.
+     */
+    @org.junit.jupiter.api.Test
+    public void testResuelve() {
+        System.out.println("Resuelve");
+        
+        PilaA pila = new PilaA();
+        pila.push("+");
+        pila.push(1);
+        pila.push(1);
+        double expResult = 2.0;
+        double result = Funcionalidades.Resuelve(pila);
+        assertEquals(expResult, result, 0.0);
+ 
+    }
+    
+}
